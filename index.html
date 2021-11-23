@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./w3.css">
+    <link rel="stylesheet" href="./index-w3s.css">
+    <link rel="stylesheet" href="./estilos.css">
+    <title>Cartas de estudio</title>
+  </head>
+
+  <body  onload="cargarNom();">
+    <header>
+      <div id="nav">
+       <input type="checkbox" id="btn-menu">
+       <label for="btn-menu" ><img src="./images/menu.png" alt="icon">  </label>
+       <nav class="menu">
+           <ul id="">
+               <li><a href="">Inicio </a></li>
+               <li><a href="">Acerca de </a></li>
+               <li><a href="">FAQ</a></li>
+               <li><a href=""> Contactenos</a></li> 
+           </ul>
+           <h3 id="nombreU"></h3>
+       </nav>
+      </div>
+   </header>
+
+    <div class="w3-container w3-blue" id="w3-blue1">
+      <h1>Esta web es para practicar algunos conceptos que tu desees</h1>
+      <h3>Coloque sus preguntas y respuestas</h3>      
+    </div>
+    <div id="preguntas">
+  <form class="w3-container" onsubmit="event.preventDefault()">
+    <input class="w3-input Fname" id="fname" name="fname" placeholder="Aqui coloque su Pregunta" />
+    <select  class="w3-input" id="respuestaBySelect1" name="respuestaBySelect1" >
+    <option value="0"  name="select1">Seleccionar</option>
+    <option value="Verdadero"  name="select1">Verdadero</option>
+    <option value="Falso" name="select1">Falso</option>
+    
+    </select>
+            <br>
+    <button class="w3-button w3-round w3-yellow" id="BtnClean" onclick="clearForm()">Limpiar Formulario</button>
+    <br /><br />
+
+    <button class="w3-button w3-round w3-blue" id="BtnCreate" onclick="create()">Insertar Pregunta</button>
+    
+    <button class="w3-button w3-round w3-blue" onclick="update()">Actualizar</button>
+    <button class="w3-button w3-round w3-blue" onclick="deleteItem()">Eliminar</button>
+    <br /><br />
+    <h2 id="h2preguntas">Preguntas para contestar</h2>
+    <select id="panel" size="20" onclick="panelClick()" ondblclick="panelDClick()"> </select>
+     <select id="panel2" size="20" onclick="visible()" on ondblclick="panelDClick()"> </select>
+  </form>
+  
+  <button class="w3-button w3-round w3-blue" onclick="respuestaUsuV();" id="Verdadero">Verdadero</button>
+  <button class="w3-button w3-round w3-blue" onclick="respuestaUsuF();" id="Falso">Falso</button> 
+ </div>
+  <div id="RespuestaProg">
+    <p id="demo"></p>
+   </div>
+    
+  
+    <div id="Manual">
+      <h2>Manual</h2>
+      <h4 class="titulosman">Aqui tenemos los pasos para hacer uso de la web</h4>
+      <h5 class="titulosman">Introduccion de los datos</h5>
+      <p class="pman">Ingresa la pregunta y la respuesta correspondiente, luego puse el boton "Insertar pregunta" <br/>
+      En caso que algo este mal puedes usar el boton "Limpiar formulario" para quitar los datos.
+
+      </p>
+      <h5 class="titulosman">Actualizar pregunta</h5>
+      <p class="pman">En caso que una pregunta que ya tuvieras en el panel, puedes seleccionar la pregunta (dolbe click), luego la pregunta y la respuesta que seleccionaste se coloca en
+        donde insertarias los datos, la editas y luego pulsar el boton de "Actualizar", <br/>
+       </p>
+       <h5 class="titulosman">Eliminar</h5>
+      <p class="pman">Si la pregunta esta en el panel, puedes seleccionar la pregunta, luego la pregunta y la respuesta que seleccionaste se coloca en
+        donde insertarias los datos,  pulsa el boton de "Eliminar" y los datos desapareceran de la parte de "preguntas para contestar" <br>
+        pero si lo hiciste por error aun la puedes volver a agregar (ya que esta en el sector  de agregar preguntas) pulsando el boton "Insertar Pregunta" <br/>
+       </p>
+       <h5 class="titulosman">Limpiar datos</h5>
+       <p class="pman">La pregunta que pusiste la quieres cambiar (antes de colocarla en Preguntas para contestar) pulsa el boton de "Limpiar formulario" y los datos desapareceran 
+        </p>
+        <h5 class="titulosman">Como se si respondi bien</h5>
+       <p class="pman">Primero para contestar tienes que selecionar una pregunta, luego en la parte de abajo encontraras 
+         dos botones ("Verdadero" y "Falso") pulsa uno de los dos y sabras como te fue con la respuesta, 
+         te saldra un cartel en la parte superior de la pantalla y en la inferior te dira si acertaste o no.
+        </p>
+        <p class="pman">Espero que esta web te sirva para tus estudios
+          <br> Buena surte!!!
+        </p>
+    </div>
+   
+    <footer>
+        <p>Author: Devicepc <br>
+  <a href="mailto:devicepc@gmail.com">Deviceoc01@gmail.com</a></p>
+    </footer>
+    
+    <script src="index-w3s.js">
+    </script>
+
+  </body>
+</html>
